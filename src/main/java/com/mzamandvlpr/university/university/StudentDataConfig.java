@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 @Configuration
 public class StudentDataConfig {
     @Bean
@@ -17,7 +19,21 @@ public class StudentDataConfig {
                    "bappy@gmail.com",
                     22
             );
-            studentRepository.save(Bappy);
+            Student Rony = new Student(
+                    103L,
+                    "MD",
+                    "Rony",
+                    "rony@gmail.com",
+                    23
+            );
+            Student Mamun = new Student(
+                    104L,
+                    "MD",
+                    "Mamun",
+                    "mamun@gmail.com",
+                    24
+            );
+            studentRepository.saveAll(List.of(Bappy, Rony, Mamun));
         };
     }
 
