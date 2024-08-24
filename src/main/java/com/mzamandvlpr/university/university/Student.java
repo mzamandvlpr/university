@@ -16,7 +16,7 @@ import lombok.*;
 public class Student {
    @Id
    @Column(name="student-id", updatable = false)
-   AUTO 
+   AUTO
            private Long id;
 
    @Column(
